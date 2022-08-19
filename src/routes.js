@@ -39,7 +39,6 @@ import CardPaymentMethod from "views/PaymentHandling/CardPaymentMethod";
 import BoostEvent from "views/AdvertisementHandling&Boosting/BoostEvent";
 import BoostAdvertisement from "views/AdvertisementHandling&Boosting/BoostAdvertisement";
 import UpdateAdvertisementInformation from "views/AdvertisementHandling&Boosting/UpdateAdvertisementInformation";
-import AdvertisementDetails from "views/AdvertisementHandling&Boosting/AdvertisementDetails";
 import ViewAdvertisement from "views/AdvertisementHandling&Boosting/ViewAdvertisement";
 import PaidList from "views/PaymentHandling/PaidList";
 import MyAdvertisementList from "views/AdvertisementHandling&Boosting/MyAdvertisementList";
