@@ -94,18 +94,18 @@ const Sidebar = (props) => {
 				</button>
 				{/* Brand */}
 				<div
-					className="header pb-9 pt-2 pt-lg-8 d-flex align-items-center"
+					className="header pb-0 pt-1 pt-lg-5 d-flex align-items-center"
 					style={{
 						backgroundImage:
 							"url(" +
-							require("../../assets/img/theme/thebliss5.png").default +
+							require("../../assets/img/logo/logo.png").default +
 							")",
-						backgroundSize: "290px",
-						backgroundPosition: "center bottom",
+						backgroundSize: "150px",
+						backgroundPosition: "center top",
+						backgroundRepeat: 'no-repeat'
 					}}
 				/>
 				<br />
-				<hr className="my-3" />
 				{/* User */}
 				<Nav className="align-items-center d-md-none">
 					<UncontrolledDropdown nav>
@@ -125,17 +125,6 @@ const Sidebar = (props) => {
 					</UncontrolledDropdown>
 					<UncontrolledDropdown nav>
 						<DropdownToggle nav>
-							<Media className="align-items-center">
-								<span className="avatar avatar-sm rounded-circle">
-									<img
-										alt="..."
-										src={
-											require("../../assets/img/theme/team-1-800x800.jpg")
-												.default
-										}
-									/>
-								</span>
-							</Media>
 						</DropdownToggle>
 						<DropdownMenu className="dropdown-menu-arrow" right>
 							<DropdownItem className="noti-title" header tag="div">
@@ -149,14 +138,6 @@ const Sidebar = (props) => {
 								<i className="ni ni-settings-gear-65" />
 								<span>Settings</span>
 							</DropdownItem>
-							{/* <DropdownItem to="/admin/user-profile" tag={Link}>
-                <i className="ni ni-calendar-grid-58" />
-                <span>Activity</span>
-              </DropdownItem>
-              <DropdownItem to="/admin/user-profile" tag={Link}>
-                <i className="ni ni-support-16" />
-                <span>Support</span>
-              </DropdownItem> */}
 							<DropdownItem divider />
 							<DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
 								<i className="ni ni-user-run" />

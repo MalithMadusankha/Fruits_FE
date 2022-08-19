@@ -30,21 +30,9 @@ const Login = () => {
         localStorage.setItem("profile", JSON.stringify(res.data));
         const user = JSON.parse(localStorage.getItem("profile"));
         console.log(user?.result?.user_type);
-        if (user?.result?.user_type === "customer") {
           history.push({
-            pathname: `/customer`,
+            pathname: `/super-fruits`,
           });
-        }
-        if (user?.result?.user_type === "service provider") {
-          history.push({
-            pathname: `/serviceprovider`,
-          });
-        }
-        if (user?.result?.user_type === "admin") {
-          history.push({
-            pathname: `/admin`,
-          });
-        }
       })
       .catch((error) => {
         console.log(error);
@@ -60,30 +48,13 @@ const Login = () => {
   return (
     <>
       <Col lg="5" md="7">
-        <Card className="bg-secondary shadow border-0">
-          <CardHeader className="bg-transparent pb-5">
+        <Card className="bg-secondary shadow border-0 mt-5">
+          <CardHeader className="bg-transparent pb-2">
             <div className="text-muted text-center mt-2 mb-3">
-              <small>Sign in with</small>
-            </div>
-            <div className="btn-wrapper text-center">
-              <Button className="btn-neutral btn-icon" color="default" href="#pablo" onClick={(e) => e.preventDefault()}>
-                <span className="btn-inner--icon">
-                  <img alt="..." src={require("../../assets/img/icons/common/facebook2.svg").default} />
-                </span>
-                <span className="btn-inner--text">Facebook</span>
-              </Button>
-              <Button className="btn-neutral btn-icon" color="default" href="#pablo" onClick={(e) => e.preventDefault()}>
-                <span className="btn-inner--icon">
-                  <img alt="..." src={require("../../assets/img/icons/common/google.svg").default} />
-                </span>
-                <span className="btn-inner--text">Google</span>
-              </Button>
+              <h1 className="text-primary" >Sign in Here</h1 >
             </div>
           </CardHeader>
           <CardBody className="px-lg-5 py-lg-5">
-            <div className="text-center text-muted mb-4">
-              <small>Or sign in with credentials</small>
-            </div>
             <Form onSubmit={formik.handleSubmit}>
               <FormGroup className="mb-3">
                 <InputGroup className="input-group-alternative">
@@ -107,12 +78,6 @@ const Login = () => {
                 </InputGroup>
                 {formik.touched.password && formik.errors.password ? <div style={{ color: "red" }}>{formik.errors.password}</div> : null}
               </FormGroup>
-              <div className="custom-control custom-control-alternative custom-checkbox">
-                <input className="custom-control-input" id=" customCheckLogin" type="checkbox" />
-                <label className="custom-control-label" htmlFor=" customCheckLogin">
-                  <span className="text-muted">Remember me</span>
-                </label>
-              </div>
               <div className="text-center">
                 <Button className="my-4" color="primary" type="submit">
                   Sign in
@@ -122,18 +87,7 @@ const Login = () => {
           </CardBody>
         </Card>
         <Row className="mt-3">
-          <Col xs="6">
-            <a className="text-light" href="#pablo" onClick={(e) => e.preventDefault()}>
-              <small>Forgot password?</small>
-            </a>
-          </Col>
-          <Col className="text-right" xs="6">
-            <Link to={`/auth/register-all`}>
-              <a className="text-light">
-                <small>Create new account</small>
-              </a>
-            </Link>
-          </Col>
+
         </Row>
       </Col>
     </>
