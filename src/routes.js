@@ -1,7 +1,8 @@
 import Login from "views/auth/Login.js";
-import QualityCheck from "views/qualityCheck/index";
+import QualityCheck from "views/qualityCheck";
 import RetailPrice from "views/retail/RetailPrice";
-import Sales from "views/service-provider/Sales";
+import Sales from "views/sales";
+import FreshnessCheck from "views/freshnessCheck";
 
 
 var routes = [
@@ -14,7 +15,7 @@ var routes = [
 	},
 
 	{
-		path: "/quality-Checks",
+		path: "/quality-checks",
 		name: "Quality Check",
 		icon: "bx bx-check-shield text-primary fs-4",
 		component: QualityCheck,
@@ -34,6 +35,14 @@ var routes = [
 		name: "Sales",
 		icon: "bx bx-store-alt text-primary fs-4",
 		component: Sales,
+		layout: "/super-fruits",
+	},
+
+	{
+		path: "/freshness-checks",
+		name: "Freshness Check",
+		icon: "bx bx-check-shield text-primary fs-4",
+		component: FreshnessCheck,
 		layout: "/super-fruits",
 	},
 
